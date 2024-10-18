@@ -1,0 +1,80 @@
+body {
+   margin: 0;
+  /* background-image: url("imagenes/fondo/fondo pa las cartas.png"); */
+  /*background-color: black;*/
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(84,27,163,1) 23%, rgba(9,9,121,1) 66%, rgba(17,150,177,1) 89%);
+background-position: center;
+-webkit-backdrop-filter: blur(5px);
+backdrop-filter: blur(5px);
+   overflow: hidden;
+}
+
+#wrapper {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-evenly;
+}
+
+#game {
+   height: 100vh;
+   max-height: 700px;
+   display: flex;
+   flex-wrap:wrap;
+   align-items: center;
+   justify-content: center;
+}
+
+#stats {
+   color: white;
+   position: absolute;
+   padding: 2rem;
+   text-align: center;
+   width: calc(100% - 2rem);
+   font-size: 3rem;
+   
+}
+
+.card {
+   width: 145px;
+   height: 145px;
+   margin: 5px;
+   position: relative;
+   transition: transform 0.5s;
+   transform-style: preserve-3d;
+}
+
+.card.active {
+   transform: rotateY(180deg);
+}
+
+.card div {
+   width: 100%;
+   height: 100%;
+   border-radius: 1rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   backface-visibility: hidden;
+   pointer-events: none;
+}
+
+.card .face {
+   background: #41df41;
+   transform: rotateY( 180deg );
+   font-size: 6rem;
+  
+}
+
+
+.card .back {
+   border: 3px solid #450fda;
+   background: url('imagenes/fondo/tapa de cartas 150x150.png') center / contain no-repeat;
+}
+#text{
+   color: antiquewhite;
+}
